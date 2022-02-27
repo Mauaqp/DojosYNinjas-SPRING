@@ -41,8 +41,9 @@ public class Dojo {
 	public Dojo() {
 		
 	}
-	public Dojo(String name) {
+	public Dojo(String name, List<Ninja> ninjas) {
 		this.name = name;
+		this.ninjas = ninjas;
 	}
 // Geters y Setters
 	public long getId() {
@@ -68,6 +69,14 @@ public class Dojo {
 	}
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	
+	
+	public List<Ninja> getNinjas() {
+		return ninjas;
+	}
+	public void setNinjas(List<Ninja> ninjas) {
+		this.ninjas = ninjas;
 	}
 	@PrePersist
     protected void onCreate(){

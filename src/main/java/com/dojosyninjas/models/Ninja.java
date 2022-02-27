@@ -47,7 +47,13 @@ public class Ninja {
 	private Date updatedAt;
 	
 //	Constructor
-	public Ninja () {
+	public Ninja (String first_name, String last_name, int age, Dojo dojo) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.age = age;
+		this.dojo = dojo;
+	}
+	public Ninja() {
 		
 	}
 	
@@ -99,6 +105,17 @@ public class Ninja {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	
+	
+	public Dojo getDojo() {
+		return dojo;
+	}
+	public void setDojo(Dojo dojo) {
+		this.dojo = dojo;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 	@PrePersist
     protected void onCreate(){
